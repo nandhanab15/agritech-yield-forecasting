@@ -1,4 +1,8 @@
-\# Environment Setup
+# Agritech Yield Forecasting
+
+## Problem Statement
+
+This project focuses on agritech data analysis and yield forecasting. The goal is to build a data pipeline that processes agricultural sensor data such as temperature, humidity, and CO₂ levels to support crop yield prediction and decision-making in controlled farming environments like polyhouses.\# Environment Setup
 
 
 
