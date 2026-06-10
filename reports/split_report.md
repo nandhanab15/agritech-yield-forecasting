@@ -1,0 +1,42 @@
+# Task 4 Split Summary
+
+## Objective
+
+Build feature matrix X and target y using cleaned polyhouse sensor data.  
+A chronological train/test split was used to avoid data leakage.
+
+## Feature Columns
+
+- temperature_c
+- humidity_pct
+- co2_ppm
+
+## Target Column
+
+- yield_kg
+
+## Split Method
+
+The dataset was sorted by timestamp and split chronologically using an 80:20 ratio.
+
+## Row Counts
+
+- Total rows: 365
+- Train rows: 292
+- Test rows: 73
+
+## Date Ranges
+
+- Train start date: 2024-01-01 00:00:00
+- Train end date: 2024-10-18 00:00:00
+- Test start date: 2024-10-19 00:00:00
+- Test end date: 2024-12-30 00:00:00
+
+## Scaling
+
+MinMaxScaler was fitted only on the training feature set.  
+The test feature set was transformed using the scaler fitted on training data only.
+
+## Leakage Prevention
+
+No test data was used while fitting the scaler.
