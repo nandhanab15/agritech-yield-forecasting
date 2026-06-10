@@ -2,38 +2,38 @@
 
 ## Dataset Overview
 
-Total observations: 365
+Total observations: 917
 
-Date range: 2024-01-01 to 2024-12-30
+Date range: 2025-01-01 to 2025-02-11
 
-Sampling frequency: 1 days 00:00:00
+Sampling frequency: 0 days 01:00:00
 
 Rows passing validity checks: 100.0%
 
 
 ## Summary Statistics
 
-|               |   count |   mean |   std |    min |    25% |    50% |    75% |     max |    cv |
-|:--------------|--------:|-------:|------:|-------:|-------:|-------:|-------:|--------:|------:|
-| temperature_c |     365 |  21.99 |  1.41 |  18.15 |  21.01 |  21.97 |  22.88 |   26.37 | 0.064 |
-| humidity_pct  |     365 |  86.74 |  3.07 |  78.1  |  84.6  |  86.7  |  88.7  |   94.8  | 0.035 |
-| co2_ppm       |     365 | 901.16 | 78.27 | 608    | 854    | 904    | 949    | 1154    | 0.087 |
-| yield_kg      |     365 |  17.14 |  0.68 |  15.31 |  16.7  |  17.13 |  17.63 |   18.85 | 0.04  |
+|               |   count |   mean |    std |    min |    25% |    50% |     75% |     max |    cv |
+|:--------------|--------:|-------:|-------:|-------:|-------:|-------:|--------:|--------:|------:|
+| temperature_c |     917 |  21.94 |   1.97 |  14.7  |  20.61 |  22.02 |   23.17 |   28.36 | 0.09  |
+| humidity_pct  |     917 |  74.22 |   8.05 |  50.62 |  68.98 |  74.53 |   79.51 |   98.31 | 0.108 |
+| co2_ppm       |     917 | 903.61 | 153.02 | 440.43 | 800.84 | 903.67 | 1002.36 | 1358.93 | 0.169 |
+| yield_kg      |     917 |  12.1  |   1.26 |   8.18 |  11.24 |  12.12 |   12.93 |   16.25 | 0.104 |
 
 ## Yield Analysis
 
-- Mean yield: 17.14 kg
+- Mean yield: 12.1 kg
 
-- Median yield: 17.13 kg
+- Median yield: 12.12 kg
 
 - Mean and median yield are very similar, suggesting little skew in harvested yield.
 
 
 ## Data Quality Metrics
 
-- Total rows: 365
+- Total rows: 917
 
-- Valid rows: 365
+- Valid rows: 917
 
 - Percentage passing validity rules: 100.0%
 

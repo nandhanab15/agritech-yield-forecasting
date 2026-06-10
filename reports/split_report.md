@@ -19,15 +19,15 @@ The dataset was sorted by timestamp before splitting to prevent future data from
 
 ## Train Period
 
-- Start date: 2024-01-01 00:00:00
-- End date: 2024-10-18 00:00:00
-- Rows: 292
+- Start date: 2025-01-01 00:00:00
+- End date: 2025-02-03 12:00:00
+- Rows: 733
 
 ## Test Period
 
-- Start date: 2024-10-19 00:00:00
-- End date: 2024-12-30 00:00:00
-- Rows: 73
+- Start date: 2025-02-03 13:00:00
+- End date: 2025-02-11 15:00:00
+- Rows: 184
 
 ## Leakage Prevention
 
