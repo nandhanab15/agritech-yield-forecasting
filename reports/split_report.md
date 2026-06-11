@@ -21,16 +21,16 @@ The dataset was sorted by timestamp and split chronologically using an 80:20 rat
 
 ## Row Counts
 
-- Total rows: 365
-- Train rows: 292
-- Test rows: 73
+- Total rows: 925
+- Train rows: 740
+- Test rows: 185
 
 ## Date Ranges
 
-- Train start date: 2024-01-01 00:00:00
-- Train end date: 2024-10-18 00:00:00
-- Test start date: 2024-10-19 00:00:00
-- Test end date: 2024-12-30 00:00:00
+- Train start date: 2025-01-02 00:00:00
+- Train end date: 2027-03-18 00:00:00
+- Test start date: 2027-03-19 00:00:00
+- Test end date: 2027-09-27 00:00:00
 
 ## Scaling
 

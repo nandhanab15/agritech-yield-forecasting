@@ -13,14 +13,33 @@ MODELS.mkdir(parents=True, exist_ok=True)
 REPORTS.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_parquet(INPUT)
-df = df.sort_values("timestamp").reset_index(drop=True)
+df["temp_humid_interaction"] = df["temperature_c"] * df["humidity_pct"] / 100
 
+df["temperature_lag1"] = df["temperature_c"].shift(1)
+df["humidity_lag1"] = df["humidity_pct"].shift(1)
+df["co2_lag1"] = df["co2_ppm"].shift(1)
+
+df["temperature_3day_mean"] = df["temperature_c"].rolling(window=3).mean()
+df["humidity_3day_mean"] = df["humidity_pct"].rolling(window=3).mean()
+df["co2_3day_mean"] = df["co2_ppm"].rolling(window=3).mean()
+
+df = df.dropna().reset_index(drop=True)
+df = df.sort_values("timestamp").reset_index(drop=True)
+df["temp_humid_interaction"] = (
+    df["temperature_c"] * df["humidity_pct"] / 100
+)
 feature_cols = [
     "temperature_c",
     "humidity_pct",
-    "co2_ppm"
+    "co2_ppm",
+    "temp_humid_interaction",
+    "temperature_lag1",
+    "humidity_lag1",
+    "co2_lag1",
+    "temperature_3day_mean",
+    "humidity_3day_mean",
+    "co2_3day_mean"
 ]
-
 target_col = "yield_kg"
 
 X = df[feature_cols]

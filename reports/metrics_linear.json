@@ -1,0 +1,19 @@
+{
+    "train": {
+        "mae": 0.9999,
+        "rmse": 1.4597,
+        "r2": 0.1772
+    },
+    "test": {
+        "mae": 0.9566,
+        "rmse": 1.1987,
+        "r2": 0.3119
+    },
+    "coefficients": {
+        "temperature_c_scaled": 2.4189,
+        "humidity_pct_scaled": 1.0205,
+        "co2_ppm_scaled": -1.0563,
+        "temp_humid_interaction_scaled": 1.0289
+    },
+    "intercept": 15.5566
+}

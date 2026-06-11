@@ -1,7 +1,7 @@
 import pandas as pd
 from pathlib import Path
 
-RAW = Path("data/raw/polyhouse_sensors.csv")
+RAW = Path("data/raw/polyhouse_sensors_new.csv")
 INTERIM = Path("data/interim")
 INTERIM.mkdir(parents=True, exist_ok=True)
 

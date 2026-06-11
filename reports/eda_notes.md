@@ -6,15 +6,23 @@
 
 
 
-\* Humidity and yield show a positive relationship, although the pattern is not perfectly linear. Yield appears to be higher within a specific humidity range rather than increasing indefinitely.
+\* Humidity and yield show a moderate positive relationship, suggesting that maintaining suitable humidity levels can improve mushroom production.
 
-\* Temperature and yield display a moderate positive trend, suggesting temperature may influence mushroom production.
 
-\* CO₂ and yield show a weaker relationship compared to humidity and temperature.
 
-\* Most observations are concentrated within a narrow humidity band, indicating that environmental conditions were relatively stable throughout the collection period.
+\* Temperature demonstrates a positive relationship with yield within the normal cultivation range.
 
-\* No major clusters or extreme outliers were observed in the scatter plots, suggesting consistent sensor readings.
+
+
+\* CO2 concentration shows a weaker relationship with yield compared to temperature and humidity.
+
+
+
+\* Most observations are concentrated within realistic environmental ranges, although a small number of outliers are present.
+
+
+
+\* Data cleaning removed duplicate records and handled missing values, resulting in a cleaned dataset of 927 observations.
 
 
 
@@ -22,27 +30,39 @@
 
 
 
-\* Temperature, humidity, and CO₂ should be retained as candidate features for predictive modeling.
-
-\* Potential nonlinear relationships suggest that more flexible models may perform better than simple linear approaches.
-
-\* Correlation does not imply causation; observed relationships should be validated during model development and evaluation.
+\* Temperature, humidity, and CO2 should be retained as important predictor variables.
 
 
 
-
-
-\## Mushroom Biology Takeaways
+\* The presence of a few extreme observations should be considered during model evaluation.
 
 
 
-\* Yield tends to be higher within a controlled humidity range, which is consistent with oyster mushrooms requiring high humidity for healthy fruiting body development.
+\* Environmental variables may have nonlinear effects on yield, suggesting that more advanced models could improve prediction accuracy.
 
-\* Temperature appears related to yield, suggesting that maintaining an optimal growing temperature can improve mushroom production and reduce growth stress.
 
-\* CO₂ concentration may influence yield because poor ventilation can restrict mushroom development and affect fruit body quality.
 
-\* The scatter plots suggest that environmental variables may have optimal operating ranges rather than simple linear effects, which is common in biological systems.
+\## Mushroom Cultivation Insights
 
-\* Stable environmental conditions and the absence of major outliers indicate that the polyhouse environment was relatively well controlled during the observation period.
+
+
+\* High humidity levels generally support healthy mushroom growth and yield.
+
+
+
+\* Maintaining stable temperatures is important for consistent production.
+
+
+
+\* Excessive CO2 levels may indicate poor ventilation and can affect mushroom development.
+
+
+
+\* Environmental control plays a significant role in achieving stable yields.
+
+
+
+\* The cleaned dataset provides a reliable foundation for yield forecasting and predictive modeling.
+
+
 

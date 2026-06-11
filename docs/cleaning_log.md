@@ -11,11 +11,11 @@
 
 |               |   missing_count |   missing_percentage |
 |:--------------|----------------:|---------------------:|
-| timestamp     |               0 |                    0 |
-| temperature_c |               0 |                    0 |
-| humidity_pct  |               0 |                    0 |
-| co2_ppm       |               0 |                    0 |
-| yield_kg      |               0 |                    0 |
+| timestamp     |               0 |                 0    |
+| temperature_c |              19 |                 1.85 |
+| humidity_pct  |              20 |                 1.95 |
+| co2_ppm       |              21 |                 2.05 |
+| yield_kg      |               0 |                 0    |
 
 ## Missing Values After Cleaning
 
@@ -47,6 +47,6 @@ Duplicate timestamp rows were removed using keep="last".
 
 ## Row Count Summary
 
-- Original rows: 365
-- Cleaned rows: 365
-- Rows removed: 0
+- Original rows: 1025
+- Cleaned rows: 927
+- Rows removed: 98
