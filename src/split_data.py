@@ -13,21 +13,27 @@ MODELS.mkdir(parents=True, exist_ok=True)
 REPORTS.mkdir(parents=True, exist_ok=True)
 
 df = pd.read_parquet(INPUT)
-df["temp_humid_interaction"] = df["temperature_c"] * df["humidity_pct"] / 100
 
+# Sort by timestamp FIRST before creating lag and rolling features
+df = df.sort_values("timestamp").reset_index(drop=True)
+
+# Interaction feature
+df["temp_humid_interaction"] = (
+    df["temperature_c"] * df["humidity_pct"] / 100
+)
+
+# Lag features: previous day's sensor values
 df["temperature_lag1"] = df["temperature_c"].shift(1)
 df["humidity_lag1"] = df["humidity_pct"].shift(1)
 df["co2_lag1"] = df["co2_ppm"].shift(1)
 
+# Rolling mean features: 3-day environmental memory
 df["temperature_3day_mean"] = df["temperature_c"].rolling(window=3).mean()
 df["humidity_3day_mean"] = df["humidity_pct"].rolling(window=3).mean()
 df["co2_3day_mean"] = df["co2_ppm"].rolling(window=3).mean()
 
+# Remove first rows created as NaN due to lag/rolling
 df = df.dropna().reset_index(drop=True)
-df = df.sort_values("timestamp").reset_index(drop=True)
-df["temp_humid_interaction"] = (
-    df["temperature_c"] * df["humidity_pct"] / 100
-)
 feature_cols = [
     "temperature_c",
     "humidity_pct",

@@ -27,7 +27,7 @@ The dataset was sorted by timestamp and split chronologically using an 80:20 rat
 
 ## Date Ranges
 
-- Train start date: 2025-01-02 00:00:00
+- Train start date: 2025-01-04 00:00:00
 - Train end date: 2027-03-18 00:00:00
 - Test start date: 2027-03-19 00:00:00
 - Test end date: 2027-09-27 00:00:00

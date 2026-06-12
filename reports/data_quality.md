@@ -18,13 +18,13 @@ Rows passing validity checks: 100.0%
 | temperature_c |     927 |  23.94 |   2.16 |  18    |  22.51 |  24.03 |   25.3  |   30    | 0.09  |
 | humidity_pct  |     927 |  84.58 |   4.94 |  70    |  81.34 |  84.85 |   88.07 |   95    | 0.058 |
 | co2_ppm       |     927 | 906.06 | 181.9  | 500    | 778.16 | 905.1  | 1029.51 | 1450.72 | 0.201 |
-| yield_kg      |     927 |  17.26 |   1.58 |  12.69 |  16.27 |  17.17 |   18.14 |   28    | 0.092 |
+| yield_kg      |     927 |  25.43 |   1.56 |  19.96 |  24.46 |  25.45 |   26.4  |   30.14 | 0.061 |
 
 ## Yield Analysis
 
-- Mean yield: 17.26 kg
+- Mean yield: 25.43 kg
 
-- Median yield: 17.17 kg
+- Median yield: 25.45 kg
 
 - Mean and median yield are very similar, suggesting little skew in harvested yield.
 

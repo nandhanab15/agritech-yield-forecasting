@@ -18,13 +18,13 @@ humidity_pct = np.clip(humidity_pct, 70, 95)
 co2_ppm = np.clip(co2_ppm, 500, 1500)
 
 yield_kg = (
-    5
-    + 0.30 * temperature_c
-    + 0.07 * humidity_pct
-    - 0.001 * co2_ppm
-    + rng.normal(0, 1.2, n)
+    4
+    + 0.55 * temperature_c
+    + 0.12 * humidity_pct
+    - 0.003 * co2_ppm
+    + 0.04 * temperature_c * humidity_pct / 100
+    + rng.normal(0, 0.35, n)
 )
-
 df = pd.DataFrame({
     "timestamp": timestamps,
     "temperature_c": temperature_c.round(2),
@@ -42,7 +42,7 @@ outlier_idx = rng.choice(df.index, size=20, replace=False)
 df.loc[outlier_idx[:5], "temperature_c"] = 37
 df.loc[outlier_idx[5:10], "humidity_pct"] = 45
 df.loc[outlier_idx[10:15], "co2_ppm"] = 2300
-df.loc[outlier_idx[15:], "yield_kg"] = 28
+df.loc[outlier_idx[15:], "yield_kg"] = df["yield_kg"].mean() + 4
 
 duplicate_rows = df.sample(25, random_state=42)
 df = pd.concat([df, duplicate_rows], ignore_index=True)

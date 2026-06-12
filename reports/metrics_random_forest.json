@@ -1,0 +1,25 @@
+{
+    "random_forest": {
+        "train": {
+            "mae": 0.131,
+            "rmse": 0.21,
+            "r2": 0.9818
+        },
+        "test": {
+            "mae": 0.3597,
+            "rmse": 0.4639,
+            "r2": 0.9131
+        },
+        "feature_importances": {
+            "temp_humid_interaction_scaled": 0.8258,
+            "co2_ppm_scaled": 0.1288,
+            "temperature_c_scaled": 0.0292,
+            "humidity_pct_scaled": 0.0161
+        }
+    },
+    "linear_regression_test": {
+        "mae": 0.2812,
+        "rmse": 0.3532,
+        "r2": 0.9496
+    }
+}

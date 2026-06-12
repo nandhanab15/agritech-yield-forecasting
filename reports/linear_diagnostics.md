@@ -16,8 +16,8 @@ This means positive residuals indicate that the model under-predicted yield, whi
 
 ## Residual Summary
 
-- Mean residual: -0.288 kg
-- Maximum absolute residual: 3.012 kg
+- Mean residual: -0.090 kg
+- Maximum absolute residual: 0.890 kg
 
 ## Diagnostic Findings
 
