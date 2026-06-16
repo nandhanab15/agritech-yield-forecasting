@@ -1,0 +1,20 @@
+{
+  "raw_feature_cols": [
+    "temperature_c",
+    "humidity_pct",
+    "co2_ppm",
+    "temp_humid_interaction",
+    "temperature_lag1",
+    "humidity_lag1",
+    "co2_lag1",
+    "temperature_3day_mean",
+    "humidity_3day_mean",
+    "co2_3day_mean"
+  ],
+  "model_feature_cols": [
+    "temperature_c_scaled",
+    "humidity_pct_scaled",
+    "co2_ppm_scaled",
+    "temp_humid_interaction_scaled"
+  ]
+}

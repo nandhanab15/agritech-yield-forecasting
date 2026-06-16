@@ -148,3 +148,43 @@ The final scaler was saved using joblib at:
 
 Split artifacts were saved under `data/processed/`.
 
+## Run Inference
+
+The champion model selected for deployment is Linear Regression.
+
+Required artifacts:
+
+- models/linear_regression.joblib
+- models/scaler.joblib
+- models/feature_cols.json
+
+Run a sample prediction from the project root:
+
+python src\predict.py
+
+Expected example output:
+
+Predicted yield: 25.55 kg
+
+The prediction helper accepts raw sensor inputs:
+
+- Temperature in Celsius
+- Humidity in percentage
+- CO2 in ppm
+
+Public helper function:
+
+make_prediction(temperature, humidity, co2)
+
+## Reproducibility Notes
+
+- Champion model: Linear Regression
+- Model artifact: models/linear_regression.joblib
+- Scaler artifact: models/scaler.joblib
+- Feature list artifact: models/feature_cols.json
+- Random seed used: 42
+- Train/test split: chronological 80/20 split
+- Cross-validation method: TimeSeriesSplit
+- Inference command: python src\predict.py
+
+The prediction script uses saved artifacts only. It does not refit the scaler or reload the raw training dataset during inference.
