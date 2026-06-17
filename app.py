@@ -2,7 +2,13 @@ import streamlit as st
 import numpy as np
 import pandas as pd
 
-from src.predict import predict_yield
+try:
+    from src.predict import predict_yield
+except FileNotFoundError:
+    st.error(
+        "Model artifacts are missing. Please run the training pipeline before starting the app."
+    )
+    st.stop()
 
 
 @st.cache_resource
@@ -14,6 +20,7 @@ predict_fn = load_prediction_function()
 
 st.set_page_config(
     page_title="Mushroom Yield Forecast",
+    page_icon="🌱",
     layout="centered"
 )
 
@@ -63,7 +70,8 @@ if co2 < 600 or co2 > 1200:
     st.warning("CO₂ level is outside the typical operating range.")
 
 if st.button("Predict Yield"):
-    predicted_yield = predict_fn(temperature, humidity, co2)
+    with st.spinner("Generating yield prediction..."):
+        predicted_yield = predict_fn(temperature, humidity, co2)
 
     col1, col2 = st.columns(2)
 
@@ -144,5 +152,6 @@ st.markdown(
     - `reports/model_comparison.md`
     - `reports/eda_notes.md`
     - `reports/cv_results.md`
+    - `reports/app_testing_validation.md`
     """
 )
