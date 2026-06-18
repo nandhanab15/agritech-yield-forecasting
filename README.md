@@ -207,9 +207,7 @@ python-3.11
 
 Deployment URL:
 
-To be added after successful deployment.
-
-Local test command:
+https://agritech-yield-forecasting-k4n4so84ckvuh5jhfixbzq.streamlit.app/Local test command:
 
 python src\predict.py
 
