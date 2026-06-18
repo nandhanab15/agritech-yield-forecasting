@@ -188,3 +188,31 @@ make_prediction(temperature, humidity, co2)
 - Inference command: python src\predict.py
 
 The prediction script uses saved artifacts only. It does not refit the scaler or reload the raw training dataset during inference.
+
+## Cloud Deployment
+
+Platform: Streamlit Community Cloud
+
+Repository:
+
+https://github.com/nandhanab15/agritech-yield-forecasting
+
+Main application file:
+
+app.py
+
+Python version:
+
+python-3.11
+
+Deployment URL:
+
+To be added after successful deployment.
+
+Local test command:
+
+python src\predict.py
+
+Expected local output:
+
+Predicted yield: 25.55 kg
