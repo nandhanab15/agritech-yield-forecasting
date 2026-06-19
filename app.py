@@ -1,7 +1,7 @@
 import streamlit as st
 import numpy as np
 import pandas as pd
-
+from src.logging_utils import log_prediction
 try:
     from src.predict import predict_yield
 except FileNotFoundError:
@@ -72,6 +72,7 @@ if co2 < 600 or co2 > 1200:
 if st.button("Predict Yield"):
     with st.spinner("Generating yield prediction..."):
         predicted_yield = predict_fn(temperature, humidity, co2)
+    log_prediction(temperature, humidity, co2, predicted_yield)
 
     col1, col2 = st.columns(2)
 
